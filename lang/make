@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+exec make -f- "$@" << 'eof'
+%: force; @echo '$@'
+force:;
