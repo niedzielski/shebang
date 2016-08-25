@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+err=0
+rnd=$RANDOM
+
+cd lang
+for lang in *; do
+  ret="$("./$lang" $rnd)" && [[ ret -eq rnd ]] &&
+  echo -en '\e[32m✓' || { echo -en '\e[31m✗' && ((++err)); }
+  echo -e "\e[00m $lang"
+done
+
+exit $err
