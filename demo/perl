@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 exec perl -x "$0" "$@"
 #!perl
 print @ARGV

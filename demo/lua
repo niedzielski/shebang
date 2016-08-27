@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 _= # --[[
 exec lua "$0" "$@"
 ]] _G
