@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+_= # --[[
+exec lua "$0" "$@"
+]] _G
+print(...)
