@@ -6,7 +6,7 @@ rnd=$RANDOM
 
 cd demo
 for demo in *; do
-  ret="$("./$demo" $rnd)" && [[ ret -eq rnd ]] &&
+  ret="$("./$demo" $rnd)" && [[ "$ret" = "$rnd" ]] &&
   echo -en '\e[32m✓' || { echo -en '\e[31m✗' && ((++err)); }
   echo -e "\e[00m $demo"
 done
