@@ -2,7 +2,8 @@
 
 Scripts are executed as `#!interpreter [arg]` and most often as
 `#!/usr/bin/env interpreter`. Additional arguments cannot be used. This
-repo catalogs single file workarounds.
+repo catalogs single file workarounds mostly for fun but also slightly
+serious.
 
 ## Script Guidelines
 - Must use `#!/bin/sh` when wrapping the interpreter, otherwise use
