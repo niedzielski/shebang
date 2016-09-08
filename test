@@ -2,11 +2,11 @@
 set -euo pipefail
 
 err=0
-rnd=$RANDOM
+x=$'A \t\n🤖\\#~*+{<.?($!|&`"'\'
 
 cd demo
 for demo in *; do
-  ret="$("./$demo" $rnd)" && [[ "$ret" = "$rnd" ]] &&
+  ret="$("./$demo" "$x")" && [[ "$ret" = "$x" ]] &&
   echo -en '\e[32m✓' || { echo -en '\e[31m✗' && ((++err)); }
   echo -e "\e[00m $demo"
 done

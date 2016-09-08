@@ -1,5 +1,5 @@
 #!/bin/sh
-# $1 num; $2 .blend
+# $1 x; $2 .blend
 ''''exec blender --factory-startup -b ${2:+"$2"} -P "$0" -- "$@" #'''
 import sys; print(sys.argv[sys.argv.index('--') + 1])
 

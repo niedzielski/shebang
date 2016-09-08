@@ -1,3 +1,7 @@
 #!/bin/sh
 exec make -f- "$@" << 'eof'
-%::; @echo '$@'
+define \n
+
+
+endef
+%::; @printf '$(subst ','\'',$(subst $(\n),\n,$@))'
