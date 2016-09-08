@@ -1,7 +1,7 @@
 #!/bin/sh
 # $1 x; $2 .blend
 ''''exec blender --factory-startup -b ${2:+"$2"} -P "$0" -- "$@" #'''
-import sys; print(sys.argv[sys.argv.index('--') + 1])
+import sys; i = sys.argv.index('--'); print(sys.argv[i + 1]) if len(sys.argv) - i - 1 else sys.exit(1)
 
 # disable unsuppressable output for test
 import os; sys.stdout.flush(); o = os.dup(1); os.close(1)

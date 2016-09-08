@@ -6,13 +6,13 @@ repo catalogs single file workarounds mostly for fun but also slightly
 serious.
 
 ## Script Guidelines
+- Must be self-contained as a single file executable
+- Must support any number of interpreter arguments inline
 - Must use `#!/bin/sh` when wrapping the interpreter, otherwise use
   `#!/usr/bin/env interpreter`
-- Must be self-contained as a single file executable
-- Must work as any filename but should be named after interpreter in the
-  `demo` directory
-- Must echo the first argument passed in
-- Must support any number of interpreter arguments inline
+- Must echo the first argument with zero exit status
+- Must exit with nonzero status when no argument
+- Must work as any filename but should be named after the target program
 - Should be a paradigm (terse, clear, extensible)
 
 ## License (Public Domain)

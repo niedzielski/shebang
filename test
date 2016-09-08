@@ -6,7 +6,7 @@ x=$'A \t\n🤖\\#~*+{<.?($!|&`"'\'
 
 cd demo
 for demo in *; do
-  ret="$("./$demo" "$x")" && [[ "$ret" = "$x" ]] &&
+  ret="$("./$demo" "$x")" && [[ "$ret" = "$x" ]] && ! "./$demo" &&
   echo -en '\e[32m✓' || { echo -en '\e[31m✗' && ((++err)); }
   echo -e "\e[00m $demo"
 done

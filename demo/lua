@@ -2,4 +2,4 @@
 _= # --[[
 exec lua "$0" "$@"
 ]] _G
-print(...)
+if #arg then print(...) end os.exit(#arg - 1)
