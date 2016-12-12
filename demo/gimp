@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+# hack: no way to exit nonzero in pythonfu?
+[ -z "$1" ] && exit 1
+ARG="$1" gimp --batch-interpreter=python-fu-eval -ib - 2> /dev/null << 'eof'
+import gimpfu, os; arg=os.environ['ARG']; print(arg); pdb.gimp_quit(True)
