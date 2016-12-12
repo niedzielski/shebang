@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 exec make -f- "$@" << 'eof'
 define \n
 

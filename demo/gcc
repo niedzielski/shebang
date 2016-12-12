@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 f() {
   tmp="$(mktemp)" &&
   gcc -ansi -pedantic -Wall -Wextra -Wconversion -Werror -o"$tmp" -xc - &&
