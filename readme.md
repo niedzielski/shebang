@@ -13,6 +13,10 @@ serious.
 - Must exit with nonzero status when no argument
 - Must work as any filename but should be named after the target program
 - Should be a paradigm (terse, clear, extensible)
+- May (or may not) work when the script in its entirety is interpreted
+  by interpreter. For example, `python demo/python $RANDOM` and
+  `demo/python $RANDOM` are equivalent but only `demo/make $RANDOM`, not
+  `make -f demo/make $RANDOM` works
 
 ## License (Public Domain)
 All code is public domain and may be used without limitation.
