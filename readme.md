@@ -13,6 +13,7 @@ these hacks. Eg:
 ```
 
 ## Script Guidelines
+
 - Must be self-contained as a single file executable
 - Must support any number of interpreter arguments inline
 - Must use `#!/usr/bin/env interpreter`
@@ -26,4 +27,5 @@ these hacks. Eg:
   `make -f demo/make $RANDOM` works
 
 ## License (Public Domain)
-All code is public domain and may be used without limitation.
+
+All code in this repository is public domain and may be used without limitation.
