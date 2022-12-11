@@ -1,9 +1,16 @@
 # #! hacks
 
 Scripts are executed as `#!interpreter [arg]` and most often as
-`#!/usr/bin/env interpreter`. Additional arguments cannot be used. This
-repo catalogs single file workarounds mostly for fun but also slightly
-serious.
+`#!/usr/bin/env interpreter`. As older versions of env did not support
+additional arguments, clever hacks were needed instead. This repo catalogs
+single file workarounds.
+
+Modern env users should always favor `-S` / `--split-string=` instead of any of
+these hacks. Eg:
+
+```sh
+#!/usr/bin/env -S deno --quiet run --allow-read --allow-write --check=typescript
+```
 
 ## Script Guidelines
 - Must be self-contained as a single file executable
